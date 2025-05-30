@@ -296,3 +296,7 @@ const venderProducto = () => {
         }
     }
 }
+
+window.cargarApp = cargarApp;
+window.venderProducto = venderProducto;
+window.agregarDato = agregarDato;
