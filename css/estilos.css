@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #555;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  position: relative;
+  height: 100%;
+}
+
+/* HEADER */
+header {
+  max-width: 100%;
+  background: url(https://cdn.pixabay.com/photo/2015/11/17/08/39/pink-banner-1047071_1280.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  padding: 100px;
+}
+
+.inventarioTitulo {
+  color: #FF008C; /* Neón para impacto */
+  font-size: 30px;
+}
+
+.inventarioTotal {
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.limpiarEstilos::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.derecha {
+  float: right;
+}
+
+/* TOTALES DE INVENTARIO */
+.contenedorInventario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 0;
+}
+
+.totalMaybelline,
+.totalFenty,
+.totalChanel {
+  padding: 12px;
+  width: 40%;
+  border-radius: 12px;
+  background-position: center;
+}
+
+.totalMaybelline {
+  margin-bottom: 10px;
+  background-color: #CC3D5C; /* Primario oscuro rosado */
+}
+
+.totalFenty {
+  margin-bottom: 10px;
+  background-color: #FF6989; /* Rosado suave */
+}
+
+.totalChanel {
+  margin-bottom: 10px;
+  background-color: #B31B6E; /* Alternativo fuerte */
+}
+
+.inventarioMayTexto,
+.inventarioFenTexto,
+.inventarioChaTexto {
+  float: left;
+  font-size: 13px;
+  color: #ffffff;
+  margin-top: 2px;
+}
+
+.inventarioMayValor,
+.inventarioFenValor,
+.inventarioChaValor {
+  letter-spacing: 1px;
+  float: left;
+}
+
+/* SECCIÓN PRODUCTOS */
+.contenedor {
+  width: 860px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.maybelline,
+.fenty,
+.chanel {
+  float: left;
+  width: 220px;
+  text-align: center;
+}
+
+.maybelline {
+  margin-right: 70px;
+}
+
+.chanel {
+  margin-left: 70px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #FF008C; /* Título destacado */
+}
+
+.tarjetaFormulario {
+  background-color: #ffeaf1;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+  transition: transform 0.3s ease;
+  
+}
+
+.tarjetaFormulario:hover {
+  transform: translateY(-2px);
+  
+}
+
+.agregarContenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  gap: 15px;
+  width: 100px;    /* limita el ancho del formulario */
+  margin: 0 auto;      /* centra el contenedor en la página */
+}
+
+.agregarContenedor label {
+  font-size: 14px;
+  color: #B31B6E;
+  grid-column: span 2;
+  text-align: center;
+  
+}
+
+@media (max-width: 600px) {
+  .agregarContenedor {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.elemento {
+  padding: 20px;
+  border-bottom: 1px solid #FF6989;
+  display: flex;
+  justify-content: space-between;
+}
+
+.elemento:first-child {
+  border-top: 1px solid #000;
+}
+
+.elemento:nth-child(even) {
+  background-color: #FF6989; /* Fondo rosado claro */
+}
+
+.elementoDescripcion,
+.elementoValor,
+.elementoDisponible {
+  float: left;
+}
+
+.elementoValor,
+.elementoDisponible {
+  transition: transform 0.2s;
+}
+
+.elementoEditar {
+  float: right;
+}
+
+.elementoEliminar {
+  float: left;
+}
+
+.maybelline .elementoValor,
+.chanel .elementoEditarBtn,
+.chanel .elementoEliminarBtn {
+  color: #000000;
+}
+
+.elementoEliminarBtn,
+.elementoEditarBtn {
+  font-size: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+.elementoEliminarBtn {
+  display: none;
+  color: #FF3D5C; /* Color de eliminar: rosado fuerte */
+}
+
+.elementoEditarBtn {
+  color: #FF008C; /* Color de editar: neón fuerte */
+}
+
+.elementoEliminarBtn:focus,
+.agregarBtn:focus {
+  outline: none;
+}
+
+.elementoEliminarBtn:active,
+.agregarBtn:active {
+  transform: translateY(2px);
+}
+
+.elemento:hover .elementoEliminarBtn {
+  display: block;
+}
+
+.elemento:hover .elementoValor {
+  transform: translateX(-20px);
+}
+
+/* FORMULARIO */
+.agregar {
+  padding: 14px;
+  border-bottom: 1px solid #FF6989;
+  background-color: #ffeaf1; /* Rosado pastel claro */
+}
+
+.agregarContenedor {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.agregarCategoria,
+.agregarValor,
+.agregarDescipcion,
+.agregarCantidad,
+.agregarDescripcionVenta {
+  width: 200px;
+  border: 1.5px solid #77FF8A; /* Verde vibrante */
+  border-radius: 12px;
+  height: 44px;
+  font-size: 18px;
+  color: inherit;
+  background-color: #fcfcfc;
+  margin-right: 10px;
+  font-weight: 300;
+  transition: border 0.3s;
+}
+
+.agregarDescripcion {
+  width: 450px;
+}
+
+.agregarValor {
+  width: 200px;
+}
+
+.agregarBtn {
+  font-size: 4px;
+  background: white;
+  border-radius: 20px;
+  border-color: #77FF8A;
+  color: #77FF8A; 
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+
+.agregarCategoria:focus,
+.agregarDescripcion:focus,
+.agregarValor:focus {
+  outline: none;
+  border: 1.5px solid #77FF8A;
+}
+
+/* FOOTER */
+footer {
+  background-color: #B31B6E; /* Alternativo oscuro */
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  color: white;
+}
