@@ -2,7 +2,7 @@
   "name": "maquillaje",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite build"
+    "dev": "vite"
   },
   "dependencies": {},
   "devDependencies": {
