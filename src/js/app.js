@@ -1,4 +1,10 @@
 // Arreglos para almacenar lod datos de cada categoría
+
+import './Dato.js';
+import './Maybelline.js';
+import './Fenty.js';
+import './Chanel.js';
+
 const maybelline = [
     new Maybelline ('Contorno Maybelline','Maybelline', 132000, 50),
     new Maybelline ('Base Maybelline','Maybelline', 150000, 50), 
