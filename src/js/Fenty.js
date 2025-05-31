@@ -1,3 +1,4 @@
+
 class Fenty extends Dato {
     static contFenty = 0; // Variable estática para llevar la cuenta de los ingresos creados
 

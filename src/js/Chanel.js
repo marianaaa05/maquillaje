@@ -1,3 +1,4 @@
+
 class Chanel extends Dato {
   static contChanel = 0; // Variable estática para llevar la cuenta de los ingresos creados
 
